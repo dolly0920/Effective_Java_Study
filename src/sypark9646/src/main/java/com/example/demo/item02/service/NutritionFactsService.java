@@ -27,7 +27,9 @@ public class NutritionFactsService {
 			return true;
 		}
 
-		log.info(nutritionFacts + " " + nutritionFacts.hashCode());
+		log.info(nutritionFacts.getServingSize() + " " + nutritionFacts.getServings() + " " +
+				nutritionFacts.getCalories() + " " + nutritionFacts.getSodium() + " " +
+				nutritionFacts.getFat() + " " + nutritionFacts.getCarbohydrate());
 		return false;
 	}
 }
