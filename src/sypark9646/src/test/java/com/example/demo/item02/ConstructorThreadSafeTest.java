@@ -14,6 +14,21 @@ public class ConstructorThreadSafeTest {
 	private NutritionFactsService nutritionFactsService;
 
 	@Test
+	public void testConstructorPattern() throws InterruptedException {
+		int numberOfThreads = 500;
+		ExecutorService service = Executors.newFixedThreadPool(500);
+		CountDownLatch latch = new CountDownLatch(numberOfThreads);
+
+		for (int i = 0; i < numberOfThreads; i++) {
+			service.execute(() -> {
+				Assertions.assertTrue(NutritionFactsService.printConstructor());
+				latch.countDown();
+			});
+		}
+		latch.await();
+	}
+
+	@Test
 	public void testJavaBeansPattern() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -22,6 +37,21 @@ public class ConstructorThreadSafeTest {
 		for (int i = 0; i < numberOfThreads; i++) {
 			service.execute(() -> {
 				Assertions.assertTrue(NutritionFactsService.printJavaBeans());
+				latch.countDown();
+			});
+		}
+		latch.await();
+	}
+
+	@Test
+	public void testBuidlerPattern() throws InterruptedException {
+		int numberOfThreads = 500;
+		ExecutorService service = Executors.newFixedThreadPool(500);
+		CountDownLatch latch = new CountDownLatch(numberOfThreads);
+
+		for (int i = 0; i < numberOfThreads; i++) {
+			service.execute(() -> {
+				Assertions.assertTrue(NutritionFactsService.printBuilder());
 				latch.countDown();
 			});
 		}

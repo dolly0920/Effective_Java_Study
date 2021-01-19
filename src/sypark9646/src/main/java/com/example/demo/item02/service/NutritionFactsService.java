@@ -1,5 +1,7 @@
 package com.example.demo.item02.service;
 
+import com.example.demo.item02.model.NutritionFactsBuilderPattern;
+import com.example.demo.item02.model.NutritionFactsConstructorPattern;
 import com.example.demo.item02.model.NutritionFactsJavaBeansPattern;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -7,6 +9,18 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class NutritionFactsService {
+
+	public static boolean printConstructor() {
+		int random = (int) (Math.random() * 1000);
+
+		NutritionFactsConstructorPattern nutritionFacts = new NutritionFactsConstructorPattern(random, random, random, random, random, random);
+
+		return (nutritionFacts.getServingSize() == nutritionFacts.getServings() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getCalories() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getSodium() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getFat() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getCarbohydrate());
+	}
 
 	public static boolean printJavaBeans() {
 		NutritionFactsJavaBeansPattern nutritionFacts = NutritionFactsJavaBeansPattern.getInstance();
@@ -19,17 +33,26 @@ public class NutritionFactsService {
 		nutritionFacts.setFat(random);
 		nutritionFacts.setCarbohydrate(random);
 
-		if (nutritionFacts.getServingSize() == nutritionFacts.getServings() &&
+		return (nutritionFacts.getServingSize() == nutritionFacts.getServings() &&
 				nutritionFacts.getServingSize() == nutritionFacts.getCalories() &&
 				nutritionFacts.getServingSize() == nutritionFacts.getSodium() &&
 				nutritionFacts.getServingSize() == nutritionFacts.getFat() &&
-				nutritionFacts.getServingSize() == nutritionFacts.getCarbohydrate()) {
-			return true;
-		}
+				nutritionFacts.getServingSize() == nutritionFacts.getCarbohydrate());
+	}
 
-		log.info(nutritionFacts.getServingSize() + " " + nutritionFacts.getServings() + " " +
-				nutritionFacts.getCalories() + " " + nutritionFacts.getSodium() + " " +
-				nutritionFacts.getFat() + " " + nutritionFacts.getCarbohydrate());
-		return false;
+	public static boolean printBuilder() {
+		int random = (int) (Math.random() * 1000);
+		NutritionFactsBuilderPattern nutritionFacts = new NutritionFactsBuilderPattern.Builder(random, random)
+				.setCalories(random)
+				.setSodium(random)
+				.setFat(random)
+				.setCarbohydrate(random)
+				.build();
+
+		return (nutritionFacts.getServingSize() == nutritionFacts.getServings() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getCalories() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getSodium() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getFat() &&
+				nutritionFacts.getServingSize() == nutritionFacts.getCarbohydrate());
 	}
 }
