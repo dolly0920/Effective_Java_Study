@@ -27,7 +27,7 @@ public class SerializationTester {
     }
 
     public static void main(String[] args) {
-        // Test Seialize on StaticFactorySingleton Class.
+        // Test serialize on StaticFactorySingleton Class.
         StaticFactorySingleton instance = StaticFactorySingleton.getInstance();
         SerializationTester ST = new SerializationTester();
         byte[] serialized = ST.serialize(instance);
@@ -36,7 +36,7 @@ public class SerializationTester {
         System.out.println("instance == result : " + (instance == result));
         System.out.println("instance.equals(result) : " + (instance.equals(result)));
 
-        // Test Serialize on StaticFactorySingleton Class.
+        // Test serialize on StaticFactorySingleton Class.
         StaticFactorySingletonFixed fixedInstance = StaticFactorySingletonFixed.getInstance();
         SerializationTester fixedST = new SerializationTester();
         byte[] fixedSerialized = fixedST.serialize(instance);
