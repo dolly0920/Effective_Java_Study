@@ -44,7 +44,7 @@ public class ConstructorThreadSafeTest {
 	}
 
 	@Test
-	public void testBuidlerPattern() throws InterruptedException {
+	public void testBuilderPattern() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
 		CountDownLatch latch = new CountDownLatch(numberOfThreads);
