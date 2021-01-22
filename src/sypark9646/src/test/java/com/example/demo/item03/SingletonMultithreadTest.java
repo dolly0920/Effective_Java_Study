@@ -1,6 +1,5 @@
 package com.example.demo.item03;
 
-import com.example.demo.item02.service.NutritionFactsService;
 import java.util.HashSet;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
