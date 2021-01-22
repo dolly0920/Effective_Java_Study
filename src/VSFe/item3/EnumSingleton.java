@@ -1,4 +1,7 @@
 package VSFe.item3;
 
-public class EnumSingleton {
+public enum EnumSingleton {
+    ES;
+
+    public void test() {}
 }
