@@ -3,6 +3,9 @@ package SGKIM94;
 import java.util.Objects;
 
 
+/**
+ * ITEM1. Consider static factory methods instead of constructors.
+ */
 public class itemone {
     /**
      * Production Example
