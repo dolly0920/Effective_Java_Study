@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class StaticBlockInitializationSingleton {
+import java.io.Serializable;
+
+public class StaticBlockInitializationSingleton implements Serializable {
 
 	private static StaticBlockInitializationSingleton instance;
 
@@ -19,6 +21,10 @@ public class StaticBlockInitializationSingleton {
 	}
 
 	public static StaticBlockInitializationSingleton getInstance() {
+		return instance;
+	}
+
+	protected Object readResolve() {
 		return instance;
 	}
 }

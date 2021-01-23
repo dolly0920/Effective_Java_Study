@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class SynchronizedSingleton {
+import java.io.Serializable;
+
+public class SynchronizedSingleton implements Serializable {
 
 	private static SynchronizedSingleton instance;
 
@@ -14,6 +16,10 @@ public class SynchronizedSingleton {
 		if (instance == null) {
 			instance = new SynchronizedSingleton();
 		}
+		return instance;
+	}
+
+	protected Object readResolve() {
 		return instance;
 	}
 }
