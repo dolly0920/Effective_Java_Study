@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class InitializationOnDemandHolderIdiomSingleton {
+import java.io.Serializable;
+
+public class InitializationOnDemandHolderIdiomSingleton implements Serializable {
 
 	private InitializationOnDemandHolderIdiomSingleton() {
 		if (getInstance() != null) {
@@ -15,5 +17,9 @@ public class InitializationOnDemandHolderIdiomSingleton {
 	private static class SingletonLazyHolder {
 
 		private static final InitializationOnDemandHolderIdiomSingleton INSTANCE = new InitializationOnDemandHolderIdiomSingleton();
+	}
+
+	protected Object readResolve() {
+		return getInstance();
 	}
 }

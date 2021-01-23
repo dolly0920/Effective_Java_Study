@@ -16,7 +16,7 @@ public class EagerInitializationSingleton implements Serializable {
 		return instance;
 	}
 
-	private Object readResolve() {
+	protected Object readResolve() {
 		return instance;
 	}
 }

@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class LazyInitializationSingleton {
+import java.io.Serializable;
+
+public class LazyInitializationSingleton implements Serializable {
 
 	private static LazyInitializationSingleton instance;
 
@@ -14,6 +16,10 @@ public class LazyInitializationSingleton {
 		if (instance == null) {
 			instance = new LazyInitializationSingleton();
 		}
+		return instance;
+	}
+
+	protected Object readResolve() {
 		return instance;
 	}
 }

@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class DoubleCheckingLockingSingleton {
+import java.io.Serializable;
+
+public class DoubleCheckingLockingSingleton implements Serializable {
 
 	private static DoubleCheckingLockingSingleton instance;
 
@@ -21,4 +23,7 @@ public class DoubleCheckingLockingSingleton {
 		return instance;
 	}
 
+	protected Object readResolve() {
+		return instance;
+	}
 }
