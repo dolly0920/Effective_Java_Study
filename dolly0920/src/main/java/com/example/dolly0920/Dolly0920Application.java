@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Dolly0920Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Dolly0920Application.class, args);
 	}
 
