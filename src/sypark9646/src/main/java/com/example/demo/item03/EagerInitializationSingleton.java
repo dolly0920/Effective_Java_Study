@@ -1,6 +1,8 @@
 package com.example.demo.item03;
 
-public class EagerInitializationSingleton {
+import java.io.Serializable;
+
+public class EagerInitializationSingleton implements Serializable {
 
 	private static EagerInitializationSingleton instance = new EagerInitializationSingleton();
 
@@ -11,6 +13,10 @@ public class EagerInitializationSingleton {
 	}
 
 	public static EagerInitializationSingleton getInstance() {
+		return instance;
+	}
+
+	private Object readResolve() {
 		return instance;
 	}
 }
