@@ -1,20 +1,18 @@
-package com.example.demo.item03;
+package com.example.sypark9646.item03;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.HashSet;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SingletonSerializeTests {
 
 	@Test
+	@DisplayName("singleton eager init 방식 serialize 테스트")
 	public void testEagerInitializationSingleton() throws IOException, ClassNotFoundException {
 		EagerInitializationSingleton singleton1 = EagerInitializationSingleton.getInstance();
 
@@ -31,6 +29,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton double checking locking 방식 serialize 테스트")
 	public void testDoubleCheckingLockingSingleton() throws IOException, ClassNotFoundException {
 		DoubleCheckingLockingSingleton singleton1 = DoubleCheckingLockingSingleton.getInstance();
 
@@ -48,6 +47,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton enum 방식 serialize 테스트")
 	public void testEnumSingleton() throws IOException, ClassNotFoundException {
 		EnumSingleton singleton1 = EnumSingleton.INSTANCE;
 
@@ -64,6 +64,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton holder 방식 serialize 테스트")
 	public void testInitializationOnDemandHolderIdionSingleton() throws IOException, ClassNotFoundException {
 		InitializationOnDemandHolderIdiomSingleton singleton1 = InitializationOnDemandHolderIdiomSingleton.getInstance();
 
@@ -80,6 +81,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton lazy init 방식 serialize 테스트")
 	public void testLazyInitializationSingleton() throws IOException, ClassNotFoundException {
 		LazyInitializationSingleton singleton1 = LazyInitializationSingleton.getInstance();
 
@@ -96,6 +98,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton static block init 방식 serialize 테스트")
 	public void testStaticBlockInitializationSingleton() throws IOException, ClassNotFoundException {
 		StaticBlockInitializationSingleton singleton1 = StaticBlockInitializationSingleton.getInstance();
 
@@ -112,6 +115,7 @@ public class SingletonSerializeTests {
 	}
 
 	@Test
+	@DisplayName("singleton synchronized 방식 serialize 테스트")
 	public void testSynchronizedSingleton() throws IOException, ClassNotFoundException {
 		SynchronizedSingleton singleton1 = SynchronizedSingleton.getInstance();
 

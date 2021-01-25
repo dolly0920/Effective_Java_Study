@@ -1,4 +1,4 @@
-package com.example.demo.item02.model;
+package com.example.sypark9646.item02.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

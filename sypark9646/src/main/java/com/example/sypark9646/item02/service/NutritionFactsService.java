@@ -1,8 +1,8 @@
-package com.example.demo.item02.service;
+package com.example.sypark9646.item02.service;
 
-import com.example.demo.item02.model.NutritionFactsBuilderPattern;
-import com.example.demo.item02.model.NutritionFactsConstructorPattern;
-import com.example.demo.item02.model.NutritionFactsJavaBeansPattern;
+import com.example.sypark9646.item02.model.NutritionFactsBuilderPattern;
+import com.example.sypark9646.item02.model.NutritionFactsConstructorPattern;
+import com.example.sypark9646.item02.model.NutritionFactsJavaBeansPattern;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

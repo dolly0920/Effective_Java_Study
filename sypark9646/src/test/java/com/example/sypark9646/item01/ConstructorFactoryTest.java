@@ -1,11 +1,13 @@
-package com.example.demo.item01;
+package com.example.sypark9646.item01;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class ConstructorFactoryTest {
 
 	@Test
+	@DisplayName("factory pattern 테스트")
 	public void testFactoryPattern() throws InterruptedException {
 		CreateShapeFromNameFactory shapeFromNameFactory = new CreateShapeFromNameFactory();
 		Shape shape1 = shapeFromNameFactory.createShape("circle");
@@ -19,11 +21,12 @@ public class ConstructorFactoryTest {
 	}
 
 	@Test
+	@DisplayName("reflection 테스트")
 	public void testReflectionPattern() throws InterruptedException {
 		CreateShapeReflectionFactory shapeFromNameFactory = new CreateShapeReflectionFactory();
-		Shape shape1 = shapeFromNameFactory.createShape("com.example.demo.item01.Circle");
-		Shape shape2 = shapeFromNameFactory.createShape("com.example.demo.item01.Circle");
-		Shape shape3 = shapeFromNameFactory.createShape("com.example.demo.item01.Rectangle");
+		Shape shape1 = shapeFromNameFactory.createShape("com.example.sypark9646.item01.Circle");
+		Shape shape2 = shapeFromNameFactory.createShape("com.example.sypark9646.item01.Circle");
+		Shape shape3 = shapeFromNameFactory.createShape("com.example.sypark9646.item01.Rectangle");
 
 		System.out.println(shape1.getName());
 		System.out.println(shape2.getName());
@@ -32,8 +35,8 @@ public class ConstructorFactoryTest {
 	}
 
 	@Test
+	@DisplayName("constructor 테스트")
 	public void testConstructorPattern() throws InterruptedException {
-		CreateShapeReflectionFactory shapeFromNameFactory = new CreateShapeReflectionFactory();
 		Shape shape1 = new Circle();
 		Shape shape2 = new Circle();
 		Shape shape3 = new Rectangle();

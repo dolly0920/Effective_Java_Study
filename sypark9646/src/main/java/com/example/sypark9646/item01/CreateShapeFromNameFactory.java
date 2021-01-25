@@ -1,4 +1,4 @@
-package com.example.demo.item01;
+package com.example.sypark9646.item01;
 
 public class CreateShapeFromNameFactory extends ShapeFactory {
 

@@ -1,15 +1,17 @@
-package com.example.demo.item03;
+package com.example.sypark9646.item03;
 
 import java.util.HashSet;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SingletonMultithreadTest {
 
 	@Test
+	@DisplayName("singleton double checkinglocking 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testDoubleCheckingLockingSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -28,6 +30,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton eager init 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testEagerInitializationSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -46,6 +49,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton enum 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testEnumSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -64,6 +68,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton holder 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testInitializationOnDemandHolderIdionSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -82,6 +87,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton lazy init 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하지 않다")
 	public void testLazyInitializationSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -101,6 +107,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton static block init 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testStaticBlockInitializationSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
@@ -119,6 +126,7 @@ public class SingletonMultithreadTest {
 	}
 
 	@Test
+	@DisplayName("singleton synchronized 방식 멀티스레드 안전성 테스트 -> 멀티스레드에서 안전하다")
 	public void testSynchronizedSingleton() throws InterruptedException {
 		int numberOfThreads = 500;
 		ExecutorService service = Executors.newFixedThreadPool(500);
