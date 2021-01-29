@@ -3,6 +3,10 @@ package com.example.sgkim94.item04;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.example.sgkim94.item04.PrintNotification.PRINT_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item04.SMSNotification.SMS_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item04.SecurityNotification.SECURITY_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item04.TimeoutNotification.TIMEOUT_NOTIFY_MESSAGE;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -14,7 +18,7 @@ class NotificationFactoryTest {
     void getNotificationToSMS() {
         Notification notification = notificationFactory.getNotification("SMS");
 
-        assertThat(notification.notifyToUser()).isEqualTo("Check SMS!");
+        assertThat(notification.notifyToUser()).isEqualTo(SMS_NOTIFY_MESSAGE);
     }
 
     @Test
@@ -22,15 +26,15 @@ class NotificationFactoryTest {
     void getNotificationToPrint() {
         Notification notification = notificationFactory.getNotification("Print");
 
-        assertThat(notification.notifyToUser()).isEqualTo("Check Print!");
+        assertThat(notification.notifyToUser()).isEqualTo(PRINT_NOTIFY_MESSAGE);
     }
 
     @Test
     @DisplayName("Timeout의 Notify 가 발송되는지")
     void getNotificationToTimeout() {
-        Notification notification = notificationFactory.getNotification("Print");
+        Notification notification = notificationFactory.getNotification("Timeout");
 
-        assertThat(notification.notifyToUser()).isEqualTo("Check Print!");
+        assertThat(notification.notifyToUser()).isEqualTo(TIMEOUT_NOTIFY_MESSAGE);
     }
 
     @Test
@@ -38,7 +42,7 @@ class NotificationFactoryTest {
     void getNotificationToSecurity() {
         Notification notification = notificationFactory.getNotification("Security");
 
-        assertThat(notification.notifyToUser()).isEqualTo("Check Security!");
+        assertThat(notification.notifyToUser()).isEqualTo(SECURITY_NOTIFY_MESSAGE);
     }
 
     @Test
