@@ -1,12 +1,14 @@
-package com.example.sgkim94.item04;
+package com.example.sgkim94.item05;
 
+import com.example.sgkim94.item05.Notification;
+import com.example.sgkim94.item05.NotificationFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.example.sgkim94.item04.PrintNotification.PRINT_NOTIFY_MESSAGE;
-import static com.example.sgkim94.item04.SMSNotification.SMS_NOTIFY_MESSAGE;
-import static com.example.sgkim94.item04.SecurityNotification.SECURITY_NOTIFY_MESSAGE;
-import static com.example.sgkim94.item04.TimeoutNotification.TIMEOUT_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item05.PrintNotification.PRINT_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item05.SMSNotification.SMS_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item05.SecurityNotification.SECURITY_NOTIFY_MESSAGE;
+import static com.example.sgkim94.item05.TimeoutNotification.TIMEOUT_NOTIFY_MESSAGE;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
