@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class NotificationServiceTest {
-    private final NotificationService notificationService = new NotificationService();
+class NotificationFactoryTest {
+    private final NotificationFactory notificationFactory = new NotificationFactory();
 
     @Test
     @DisplayName("SMS의 Notify 가 발송되는지")
     void getNotificationToSMS() {
-        Notification notification = notificationService.getNotification("SMS");
+        Notification notification = notificationFactory.getNotification("SMS");
 
         assertThat(notification.notifyToUser()).isEqualTo("Check SMS!");
     }
@@ -20,7 +20,7 @@ class NotificationServiceTest {
     @Test
     @DisplayName("Print의 Notify 가 발송되는지")
     void getNotificationToPrint() {
-        Notification notification = notificationService.getNotification("Print");
+        Notification notification = notificationFactory.getNotification("Print");
 
         assertThat(notification.notifyToUser()).isEqualTo("Check Print!");
     }
@@ -28,7 +28,7 @@ class NotificationServiceTest {
     @Test
     @DisplayName("Timeout의 Notify 가 발송되는지")
     void getNotificationToTimeout() {
-        Notification notification = notificationService.getNotification("Print");
+        Notification notification = notificationFactory.getNotification("Print");
 
         assertThat(notification.notifyToUser()).isEqualTo("Check Print!");
     }
@@ -36,7 +36,7 @@ class NotificationServiceTest {
     @Test
     @DisplayName("Security의 Notify 가 발송되는지")
     void getNotificationToSecurity() {
-        Notification notification = notificationService.getNotification("Security");
+        Notification notification = notificationFactory.getNotification("Security");
 
         assertThat(notification.notifyToUser()).isEqualTo("Check Security!");
     }
@@ -45,7 +45,7 @@ class NotificationServiceTest {
     @DisplayName("Another Notify 발송 시 예외처리가 되는지")
     void getNotificationToAnother() {
         String errorMessage = assertThrows(IllegalArgumentException.class, () -> {
-            notificationService.getNotification("TV");
+            notificationFactory.getNotification("TV");
         }).getMessage();
 
         assertThat(errorMessage).isEqualTo("Wrong Type!");
