@@ -1,4 +1,4 @@
-package com.example.sgkim94.item04;
+package com.example.sgkim94.item05;
 
 public class SMSNotification implements Notification {
     public static final String SMS_NOTIFY_MESSAGE = "Check SMS!";
