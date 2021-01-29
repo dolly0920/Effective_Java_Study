@@ -1,9 +1,11 @@
 package com.example.sgkim94.item04;
 
 public class SMSNotification implements Notification {
+    public static final String SMS_NOTIFY_MESSAGE = "Check SMS!";
+
     @Override
     public String notifyToUser() {
-        return "Check SMS!";
+        return SMS_NOTIFY_MESSAGE;
     }
 
 }

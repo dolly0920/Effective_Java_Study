@@ -1,9 +1,11 @@
 package com.example.sgkim94.item04;
 
 public class TimeoutNotification implements Notification {
+    public static final String TIMEOUT_NOTIFY_MESSAGE = "Check Time!";
+
     @Override
     public String notifyToUser() {
-        return "Check Time!";
+        return TIMEOUT_NOTIFY_MESSAGE;
     }
 
 }

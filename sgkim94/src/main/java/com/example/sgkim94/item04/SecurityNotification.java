@@ -1,8 +1,10 @@
 package com.example.sgkim94.item04;
 
 public class SecurityNotification implements Notification {
+    public static final String SECURITY_NOTIFY_MESSAGE = "Check Security!";
+
     @Override
     public String notifyToUser() {
-        return "Check Security!";
+        return SECURITY_NOTIFY_MESSAGE;
     }
 }
