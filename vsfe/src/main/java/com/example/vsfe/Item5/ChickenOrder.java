@@ -1,11 +1,14 @@
 package com.example.vsfe.Item5;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChickenOrder {
     List<SourceType> orders;
 
-    public ChickenOrder() {}
+    public ChickenOrder() {
+        orders = new ArrayList<>();
+    }
 
     public void addOrder(String s) {
         SourceType st = Enum.valueOf(SourceType.class, s);

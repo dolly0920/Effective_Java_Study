@@ -35,4 +35,8 @@ public class ChickenStoreServiceWithFactory {
             chickenCounter.put(st, count);
         }
     }
+
+    public Map<SourceType, Integer> getInstance() {
+        return this.chickenCounter;
+    }
 }
