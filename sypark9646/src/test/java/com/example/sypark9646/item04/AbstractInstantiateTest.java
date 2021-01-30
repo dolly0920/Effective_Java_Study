@@ -1,4 +1,4 @@
-package com.example.sypark9646.item4;
+package com.example.sypark9646.item04;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
