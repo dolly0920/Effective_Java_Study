@@ -16,12 +16,12 @@ public class Example2 {
         ){
             Class.forName(driverName);
             String name = resultSet.getString(1);
-            System.out.println("회원명 : " + name);
+            System.out.println("name : " + name);
 
         } catch (ClassNotFoundException e) {
-            System.out.println("[로드 오류]\n" + e.getStackTrace());
+            System.out.println("[load error]\n" + e.getStackTrace());
         } catch (SQLException e) {
-            System.out.println("[연결 오류]\n" + e.getStackTrace());
+            System.out.println("[connection error]\n" + e.getStackTrace());
         }
     }
 }
