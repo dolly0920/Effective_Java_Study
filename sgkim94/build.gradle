@@ -23,7 +23,10 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation group: 'com.jayway.awaitility', name: 'awaitility', version: '1.7.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
 }
 
 test {
