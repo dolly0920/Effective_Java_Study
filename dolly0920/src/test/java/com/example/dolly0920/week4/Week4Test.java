@@ -10,10 +10,8 @@ class Week4Test {
 
   private final People p1 = new People(1, 30, 70, 180);
   private final People p2 = new People(1, 30, 70, 100);
-
   private final Car c1 = new Car(1, 500, 50);
   private final Car c2 = new Car(1, 500, 50);
-
   private final Spaceship s1 = new Spaceship(1, 1000, 500);
   private final Spaceship s2 = new Spaceship(1, 1000, 500);
   private final Spaceship s3 = new Spaceship(1, 1000, 500);
