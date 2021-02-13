@@ -13,7 +13,7 @@ public class Problem {
 
         int N = sc.nextInt(); // input number
 
-        int sum = 0; // sum
+        int sum = 0; // sum (Integer type => autoboxing)
         int min = 4001; // min value
         int max = -4001; // max value
 
