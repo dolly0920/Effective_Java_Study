@@ -1,6 +1,5 @@
 package com.example.sypark9646.item05;
 
-import com.example.sypark9646.item5.PersonSupplierConstruct;
 import java.time.LocalDate;
 import java.util.function.Supplier;
 import org.junit.jupiter.api.Assertions;
