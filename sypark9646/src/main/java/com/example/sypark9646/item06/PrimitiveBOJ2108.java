@@ -1,4 +1,4 @@
-package com.example.sypark9646.item6;
+package com.example.sypark9646.item06;
 
 import java.util.*;
 
