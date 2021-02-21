@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 public class Child extends Parent {
 
-		public int childField;
+		private int childField;
 
 		public Child(String parentField, int childField) {
 				super(parentField);
