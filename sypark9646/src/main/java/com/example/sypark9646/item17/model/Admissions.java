@@ -5,15 +5,12 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import com.example.sypark9646.item17.utils.Messages;
 import lombok.AccessLevel;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Admissions {
 
     public static final int MAX_APPLY_SIZE = 6;
-
-    @Getter
     private List<Admission> admissions;
 
     public Admissions(List<Admission> admissions) {
