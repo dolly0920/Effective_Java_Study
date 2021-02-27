@@ -49,9 +49,9 @@ public class Admission {
 
         return new StringBuilder("")
             .append(university.getName())
-            .append("학교")
+            .append("학교 ")
             .append(this.department)
-            .append("학과 지원 결과")
+            .append(" 지원 결과")
             .append(acceptance)
             .append("입니다.")
             .toString(); // string 으로 하는게 더 좋을까...?

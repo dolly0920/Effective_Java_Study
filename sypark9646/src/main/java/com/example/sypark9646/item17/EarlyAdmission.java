@@ -21,14 +21,17 @@ public class EarlyAdmission {
     }
 
     public void showResult() {
+        System.out.println(name+"님의 지원 결과");
         admissions.showResult();
     }
 
     public void getAcceptedResult() {
+        System.out.println(name+"님의 지원 결과");
         admissions.getAcceptedResult();
     }
 
     public void getDeclinedResult() {
+        System.out.println(name+"님의 지원 결과");
         admissions.getDeclinedResult();
     }
 }
