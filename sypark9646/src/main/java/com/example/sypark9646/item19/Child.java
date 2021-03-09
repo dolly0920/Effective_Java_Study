@@ -13,6 +13,10 @@ public class Child extends Parent {
 
     @Override
     public void overrideMe() {
+        helpOverride();
+    }
+
+    private void helpOverride(){
         System.out.println("child override");
         System.out.println(instant);
     }
