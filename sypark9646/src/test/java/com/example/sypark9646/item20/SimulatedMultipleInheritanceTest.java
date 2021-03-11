@@ -14,5 +14,6 @@ public class SimulatedMultipleInheritanceTest {
         pizzaTruck.turnLightOn();
         pizzaTruck.cook(pizza);
         pizzaTruck.turnLightOff();
+        pizzaTruck.driveTo("home");
     }
 }
