@@ -5,8 +5,10 @@ import java.util.List;
 import com.example.sypark9646.item20.interface_default_method.Animal;
 import com.example.sypark9646.item20.interface_default_method.Cat;
 import com.example.sypark9646.item20.interface_default_method.Dog;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.util.StringUtil;
 
 public class InterfaceDefaultMethodTest {
 
@@ -25,6 +27,7 @@ public class InterfaceDefaultMethodTest {
         animals.add(new Cat());
         animals.add(new Dog());
 
-        animals.forEach(Animal::jump);
+        animals.stream().map(Animal::jump)
+            .forEach(System.out::println);
     }
 }
