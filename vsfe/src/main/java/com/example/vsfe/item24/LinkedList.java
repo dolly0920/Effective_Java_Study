@@ -12,6 +12,7 @@ public class LinkedList {
 
     public void insert(int x) {
         Node next = new Node(x);
+        size++;
         if(this.head != null) {
             head.prev = next;
             next.next = head;
@@ -21,6 +22,8 @@ public class LinkedList {
 
     public int remove() {
         if (isEmpty()) throw new IllegalStateException();
+
+        size--;
 
         int result = head.getData();
         head = head.next;
